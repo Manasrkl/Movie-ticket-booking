@@ -1,0 +1,103 @@
+* {
+box-sizing: border-box;
+}
+body{
+    background-color: rgba(28, 25, 25, 0.938);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.seat{
+    background-color:white;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.row{
+    display: flex;
+}
+.mcontainer{
+    margin: 20px 0;
+}
+.mcontainer select{
+    background-color: white;
+    border: 0;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.seat.selected{
+    background-color: rgb(60, 153, 214);
+}
+.seat.occupied{
+    background-color: rgb(84, 53, 53);
+}
+.seat:nth-of-type(2){
+    margin-right: 18px;
+}
+.seat:nth-last-of-type(3){
+    margin-right: 18px;
+}
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.7);
+}
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+.showcase{
+    background-color: rgb(54, 50, 50);
+    padding: 5px 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.showcase li{
+    display: flex;
+    align-items: center;
+    margin: 6px;
+}
+.showcase small{
+    margin-left: 4px;
+}
+.screen{
+    background-color: white;
+    height: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-image: url(movie.png);
+    background-size: cover;
+    transform: rotateX(-45deg);
+    background-position: center;
+    box-shadow: 0 13px 20px rgb(255 255 255 / 75%);
+}
+.container{
+    margin-bottom: 30px;
+    perspective:1000px;
+}
+p.text{
+    margin-top: 125px;
+}
+p.text span{
+    color: rgb(50, 163, 212);
+}
+
+
+/* .container:hover{
+    perspective:0px;
+} */
